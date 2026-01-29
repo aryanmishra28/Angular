@@ -1,0 +1,113 @@
+/* Counter component styling */
+
+:host {
+	display: block;
+	padding: 24px;
+}
+
+/* Page title */
+h1 {
+	margin: 0 0 16px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: center;
+}
+
+/* Card wrapper (first div in template) */
+:host > div {
+	max-width: 420px;
+	margin: 0 auto;
+	padding: 24px;
+	border-radius: 12px;
+	background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+	border: 1px solid #eef1f6;
+}
+
+h2 {
+	margin: 0 0 20px;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
+	color: #1f2a44;
+}
+
+/* Button row (second div inside the card) */
+:host > div > div {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+button {
+	appearance: none;
+	border: 1px solid transparent;
+	padding: 10px 16px;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+	outline: none;
+}
+
+button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+button:active {
+	transform: translateY(0);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+button:focus-visible {
+	box-shadow: 0 0 0 3px rgba(49, 132, 253, 0.25);
+}
+
+/* The three buttons: Decrease, Reset, Increase */
+/* Decrease (first) */
+:host > div > div button:nth-child(1) {
+	background: #fee2e2;
+	color: #991b1b;
+	border-color: #fecaca;
+}
+
+:host > div > div button:nth-child(1):hover {
+	background: #fecaca;
+}
+
+/* Reset (second) */
+:host > div > div button:nth-child(2) {
+	background: #f3f4f6;
+	color: #111827;
+	border-color: #e5e7eb;
+}
+
+:host > div > div button:nth-child(2):hover {
+	background: #e5e7eb;
+}
+
+/* Increase (third) */
+:host > div > div button:nth-child(3) {
+	background: #dcfce7;
+	color: #065f46;
+	border-color: #bbf7d0;
+}
+
+:host > div > div button:nth-child(3):hover {
+	background: #bbf7d0;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+	:host {
+		padding: 16px;
+	}
+	:host > div {
+		padding: 18px;
+	}
+}
+
