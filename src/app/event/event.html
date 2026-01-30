@@ -1,0 +1,16 @@
+<button (click)="handleEvent($event)">Click Me</button><br><br>
+
+<div (mouseenter)="handleEvent($event)" style="width: 100px; height: 100px; background-color: green"></div>
+<br><br>
+<div (mouseleave)="handleEvent($event)" style="width: 100px; height: 100px; background-color: red"></div>
+<br><br>
+<input (input)="handleEvent($event)" placeholder="Type something"/>
+
+<div>
+  <h1> Get and Set value in Angular</h1>
+  <h1> User Name is :{{name}}</h1>
+  <input type="text" (input)="getName($event)" placeholder="Type here"/><br><br>
+  <button (click)="displayName()">Get Value From Text Field And Display when button clicked</button>
+  <br>
+  <h2> Name is: {{setName}}</h2>
+</div>
