@@ -1,0 +1,25 @@
+<h1>If Else | Control Flow</h1>
+
+<h2>Hide and Show with button click</h2>
+@if(display){
+  <div style="width: 100px; height: 100px; background-color: red;">
+
+  </div><br>
+}
+<button (click)="hide()">Hide</button><br><br>
+<button (click)="show()">Show</button><br><br>
+<button (click)="toggle()">Toggle</button><br><br><br>
+
+<h2>Toggle between two divs with button click</h2>
+@if(toggleDiv){
+  <div style="width: 100px; height: 100px; background-color: green;">
+
+  </div>
+}
+@else {
+  <div style="width: 100px; height: 100px; background-color: yellow;;"></div>
+}<br>
+<button (click)="toggleTwo()">Toggle Two Div</button>
+
+<h2> Update button text with toggle</h2>
+<button (click)="toggleTwo()">{{ toggleDiv? 'show yellow div': 'show green div'}}</button>

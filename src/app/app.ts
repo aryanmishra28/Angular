@@ -4,11 +4,14 @@ import { Login } from './login/login'; // Importing Login component
 import { Datatype } from './datatype/datatype';
 import { Counter } from './counter/counter';
 import { Event } from './event/event';
+import { Conditions } from './conditions/conditions';
+import { Conditions2 } from './conditions-2/conditions-2';
+import { Loop } from "./loop/loop";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Event],
+  imports: [Event, Conditions, Conditions2, Loop],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
