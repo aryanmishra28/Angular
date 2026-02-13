@@ -7,11 +7,12 @@ import { Event } from './event/event';
 import { Conditions } from './conditions/conditions';
 import { Conditions2 } from './conditions-2/conditions-2';
 import { Loop } from "./loop/loop";
+import { Signal } from './signal/signal';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Event, Conditions, Conditions2, Loop],
+  imports: [Event, Conditions, Conditions2, Loop, Signal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
