@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, twoWayBinding } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login'; // Importing Login component
 import { Datatype } from './datatype/datatype';
@@ -8,11 +8,13 @@ import { Conditions } from './conditions/conditions';
 import { Conditions2 } from './conditions-2/conditions-2';
 import { Loop } from "./loop/loop";
 import { Signal } from './signal/signal';
+import { TwoWayBinding } from './two-way-binding/two-way-binding';
+import { Todo } from "./todo/todo";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Event, Conditions, Conditions2, Loop, Signal],
+  imports: [Event, Conditions, Conditions2, Loop, Signal, TwoWayBinding, Todo],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

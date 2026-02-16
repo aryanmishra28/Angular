@@ -1,0 +1,12 @@
+<p>todo works!</p>
+<input type="text" placeholder="Enter todo" [value]="taskInput" (input)="input($event)" (keyup.enter)="addTask()">
+<button (click)="addTask()">Add Task</button>
+
+<ul>
+	<li *ngFor="let t of tasks">{{ t }}</li>
+	<!-- Alternatively, new control flow:
+	@for (t of tasks; track t) {
+		<li>{{ t }}</li>
+	}
+	-->
+</ul>
